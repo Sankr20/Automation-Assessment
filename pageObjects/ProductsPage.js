@@ -34,7 +34,7 @@ async chooseProduct(product){
         const titleWebElement=productContainer.locator('.inventory_item_name');
         const titleText= await titleWebElement.textContent();
 
-        if(product.includes(titleText.trim())){
+        if(product === (titleText.trim())){
 
            const addToCartBtn=await productContainer.locator('.btn');
            await addToCartBtn.click();
